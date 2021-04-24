@@ -1,1 +1,3 @@
-console.log('Alert! This is just a test!');
+import { loadPage } from './modules/page';
+
+loadPage();
