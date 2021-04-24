@@ -1,13 +1,12 @@
+import { createElement } from './util/dom';
 
 const generate = (container) => {
     const navChoices = ["home", "menu", "contact"];
-    const navElement = document.createElement("nav");
-    const listElement = document.createElement("ul");
+    const navElement = createElement("nav");
+    const listElement = createElement("ul");
 
     navChoices.forEach(navItem => {
-        let itemElement = document.createElement("li");
-        const txt = document.createTextNode(navItem);
-        itemElement.appendChild(txt);
+        const itemElement = createElement("li", null, null, null, navItem);
         listElement.appendChild(itemElement);
     });
 
@@ -18,12 +17,8 @@ const generate = (container) => {
 }
 
 const createLogoDiv = (title) => {
-    const logoDiv = document.createElement("div");
-    logoDiv.id = "logo";
-    const heading = document.createElement("h1");
-    const txt = document.createTextNode(title);
-
-    heading.appendChild(txt);
+    const logoDiv = createElement("div", "logo");
+    const heading = createElement("h1", null, null, null, title);
     logoDiv.appendChild(heading);
 
     return logoDiv;
