@@ -8,16 +8,26 @@ html {
 }
 
 :root {
-    --baseFontSize: 1rem;
+    --baseFontSize: 1.1rem;
     --h1FontSize: 2rem;
+    --logoFontSize: 2.5rem;
+    --btnFontSize: 1.3rem;
+    --logoFontFamily: "Carter One", cursive;
+    --mainFontFamily: "Kanit", sans-serif;
 }
 
 body {
     font-size: var(--baseFontSize);
+    font-family: var(--mainFontFamily);
 }
 
 h1 {
     font-size: var(--h1FontSize);
+}
+
+#logo h1 {
+    font-family: var(--logoFontFamily);
+    font-size: var(--logoFontSize);
 }
 
 #content {
@@ -36,7 +46,7 @@ h1 {
 
 nav {
     height: 100px;
-    border-bottom: 5px solid red;
+    border-bottom: 2px solid #ff6347;
     background-color: rgba(0, 0, 0, 0.36);
     display: flex;
     justify-content: space-between;
@@ -49,6 +59,12 @@ nav {
 
 nav ul {
     display: flex;
+    align-items: center;
+}
+
+.active {
+    border-bottom: 3px solid #ff6347;
+    padding-bottom: 5px;    
 }
 
 nav li {
@@ -57,14 +73,54 @@ nav li {
 }
 
 nav li:hover {
-    color: red;
+    color: #ff6347;
     cursor: pointer;
+    padding-bottom: 5px;
 }
 
 main {
     display: flex;
+    height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+#content-main {
+    width: 550px;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.36);;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero h1 {
+    font-family: var(--logoFontFamily);
+    font-size: var(--logoFontSize);
+}
+
+#hero p {
+    margin: 15px 0;
+}
+
+.menu-btn {
+    color: black;
+    background-color: red;
+    border: none;
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: var(--mainFontFamily);
+    font-weight: bold;
+    font-size: var(--btnFontSize);
 }
 
 footer {
@@ -72,7 +128,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 5px solid red;
+    border-top: 2px solid #ff6347;
     background-color: rgba(0, 0, 0, 0.36);
 }
 
