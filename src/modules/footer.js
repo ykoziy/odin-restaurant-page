@@ -1,3 +1,5 @@
+import { createElement } from './util/dom';
+
 const socialNetworks = [
     {
         "url": "https://twitter.com/",
@@ -25,41 +27,32 @@ const generate = (container) => {
 }
 
 const createCreditDiv = (contents) => {
-    const creditDiv = document.createElement("div");
-    const pElement =  document.createElement("p");
-    const txt = document.createTextNode(contents);
+    const creditDiv = createElement("div", "credit");
+    const pElement =  createElement("p", null, null, null, contents);
 
-    pElement.appendChild(txt);
-    creditDiv.id = "credit";
     creditDiv.appendChild(pElement);
 
     return creditDiv;
 }
 
 const createSocialDiv = () => {
-    const socialDiv = document.createElement("div");
-    const listElement = document.createElement("ul");
+    const socialDiv = createElement("div", "social");
+    const listElement = createElement("ul");
 
     socialNetworks.forEach(item => {
-        let itemElement = document.createElement("li");
+        let itemElement = createElement("li");
         itemElement.appendChild(createSocialLink(item.url, item.icon));
         listElement.appendChild(itemElement);
     });
 
-    socialDiv.id = "social";
     socialDiv.appendChild(listElement);
 
     return socialDiv;
 }
 
 const createSocialLink = (url, icon) => {
-    const aElement = document.createElement("a");
-    const iconElement = document.createElement("i");
-
-    aElement.href = url;
-    aElement.target = "_blank";
-
-    iconElement.classList.add("fab", "fa-2x", icon);
+    const aElement = createElement("a", null, null, [['href', url], ['target', '_blank']]);
+    const iconElement = createElement("i", null, `fab fa-2x ${icon}`);
 
     aElement.appendChild(iconElement);
     return aElement;
