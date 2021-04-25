@@ -1,4 +1,5 @@
 import { createElement } from './util/dom';
+import { handleNavClick } from './page';
 
 const generate = (container) => {
     const navChoices = ["home", "menu", "contact"];
@@ -7,6 +8,7 @@ const generate = (container) => {
 
     navChoices.forEach(navItem => {
         const itemElement = createElement("li", null, null, null, navItem);
+        itemElement.addEventListener("click", handleNavClick);
         listElement.appendChild(itemElement);
     });
 

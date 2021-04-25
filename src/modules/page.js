@@ -9,4 +9,23 @@ const loadPage = () => {
     generateFooter(contentDiv);
 }
 
-export { loadPage };
+const togglePage = (page) => {
+    if (page == "home") {
+        console.log('Load home page.');
+    } else if (page == "menu") {
+        console.log('Load menu page.');
+    } else if (page == "contact") {
+        console.log('Load contact page.');
+    }
+};
+
+const handleNavClick = (event) => {
+    const navItems = Array.from(event.currentTarget.parentNode.children);
+    navItems.forEach(item => {
+        item.classList.remove("active");
+    });
+    event.target.classList.add("active");
+    togglePage(event.target.textContent);
+}
+
+export { loadPage, handleNavClick };
