@@ -31,7 +31,7 @@ h1 {
 }
 
 #content {
-    background: url(../img/main-bg.jpg) no-repeat center center fixed;
+    background: url(../img/main-bg.avif) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
