@@ -5,7 +5,7 @@ const createElement = (type, id, classList, attributes, txt) => {
     }
 
     if (classList) {
-        element.classList.add(classList.split(" "));
+        element.classList.add(...classList.split(" "));
     }
 
     if (attributes) {
