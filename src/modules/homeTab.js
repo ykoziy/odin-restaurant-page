@@ -1,12 +1,7 @@
 import { createElement } from './util/dom';
 
 const generate = (container) => {
-    const mainElement = createElement("main");
-    const contentElement = createElement("div", "content-main");
-
-    contentElement.appendChild(createHeroDiv());
-    mainElement.appendChild(contentElement);
-    container.appendChild(mainElement);
+    container.appendChild(createHeroDiv());
 }
 
 const createHeroDiv = () => {
@@ -18,7 +13,6 @@ const createHeroDiv = () => {
     heroDiv.appendChild(heading);
 
     const pElement = createElement("p", null, null, null, heroText);
-    const pTxt = document.createTextNode(heroText);
     heroDiv.appendChild(pElement);
 
     const menuButton = createElement("button", null, "menu-btn", null, "menu");

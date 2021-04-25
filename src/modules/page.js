@@ -1,5 +1,5 @@
 import { generate as generateHeader} from './header';
-import { generate as generateMain} from './mainHome';
+import { generate as generateMain, togglePage} from './main';
 import { generate as generateFooter} from './footer';
 
 const loadPage = () => {
@@ -8,16 +8,6 @@ const loadPage = () => {
     generateMain(contentDiv);
     generateFooter(contentDiv);
 }
-
-const togglePage = (page) => {
-    if (page == "home") {
-        console.log('Load home page.');
-    } else if (page == "menu") {
-        console.log('Load menu page.');
-    } else if (page == "contact") {
-        console.log('Load contact page.');
-    }
-};
 
 const handleNavClick = (event) => {
     const navItems = Array.from(event.currentTarget.parentNode.children);
