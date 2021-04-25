@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-main {
+    width: 550px;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+#content-main > * {
+    animation: showTab 500ms ease-in-out;
+}

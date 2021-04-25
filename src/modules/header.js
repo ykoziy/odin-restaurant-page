@@ -1,5 +1,6 @@
 import { createElement } from './util/dom';
 import { handleNavClick } from './page';
+import '../styles/header.scss';
 
 const generate = (container) => {
     const navChoices = ["home", "menu", "contact"];

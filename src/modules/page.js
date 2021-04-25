@@ -2,6 +2,8 @@ import { generate as generateHeader} from './header';
 import { generate as generateMain, togglePage} from './main';
 import { generate as generateFooter} from './footer';
 
+import '../styles/global.scss';
+
 const loadPage = () => {
     const contentDiv = document.getElementById("content");
     generateHeader(contentDiv);

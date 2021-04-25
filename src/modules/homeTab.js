@@ -1,5 +1,7 @@
 import { createElement } from './util/dom';
 
+import '../styles/home.scss';
+
 const generate = (container) => {
     container.appendChild(createHeroDiv());
 }

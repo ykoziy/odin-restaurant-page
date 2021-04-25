@@ -4,6 +4,8 @@ import homeTab from './homeTab';
 import menuTab from './menuTab';
 import contactTab from './contactTab';
 
+import '../styles/main.scss';
+
 const generate = (container) => {
     const mainElement = createElement("main");
     const contentElement = createElement("div", "content-main");

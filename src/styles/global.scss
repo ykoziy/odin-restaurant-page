@@ -1,0 +1,67 @@
+@import 'vars';
+
+html {
+    box-sizing: border-box;
+    color: white;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: $base-font-size;
+    font-family: $main-font-family;
+}
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+#logo h1 {
+    font-family: $logo-font-family;
+    font-size: $logo-font-size;
+}
+
+#content {
+    background: url("../img/main-bg.avif") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 560px) {
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 110px;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 110px;
+    }
+}
+
+@keyframes showTab {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

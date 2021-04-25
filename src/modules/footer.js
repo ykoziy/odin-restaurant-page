@@ -1,4 +1,5 @@
 import { createElement } from './util/dom';
+import '../styles/footer.scss';
 
 const socialNetworks = [
     {
