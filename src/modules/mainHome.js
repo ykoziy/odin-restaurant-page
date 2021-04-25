@@ -1,9 +1,8 @@
+import { createElement } from './util/dom';
+
 const generate = (container) => {
-    const mainElement = document.createElement("main");
-    const contentElement = document.createElement("div");
-
-    contentElement.id = "content-main";
-
+    const mainElement = createElement("main");
+    const contentElement = createElement("div", "content-main");
 
     contentElement.appendChild(createHeroDiv());
     mainElement.appendChild(contentElement);
@@ -13,23 +12,17 @@ const generate = (container) => {
 const createHeroDiv = () => {
     const heroText = 'Authentic italian pizza napoletana. Made with fresh organic ingridients, baked to perfection in wood fired brick oven.';
 
-    const heroDiv = document.createElement("div");
-    heroDiv.id = "hero";
+    const heroDiv = createElement("div", "hero");
 
-    const heading = document.createElement("h1");
-    const headingTxt = document.createTextNode("Napoli Pizzeria");
-    heading.appendChild(headingTxt);
+    const heading = createElement("h1", null, null, null, "Napoli Pizzeria");
     heroDiv.appendChild(heading);
 
-    const pElement = document.createElement("p");
+    const pElement = createElement("p", null, null, null, heroText);
     const pTxt = document.createTextNode(heroText);
-    pElement.appendChild(pTxt);
     heroDiv.appendChild(pElement);
 
-    const menuButton = document.createElement("button");
+    const menuButton = createElement("button", null, "menu-btn", null, "menu");
     menuButton.classList.add("menu-btn");
-    const buttonTxt = document.createTextNode("menu");
-    menuButton.appendChild(buttonTxt); 
     heroDiv.appendChild(menuButton);
 
     return heroDiv;
