@@ -12,6 +12,8 @@ const generate = (container) => {
         listElement.appendChild(itemElement);
     });
 
+    listElement.children[0].classList.add("active");
+
     navElement.appendChild(createLogoDiv("Napoli Pizzeria"));
 
     navElement.appendChild(listElement);
