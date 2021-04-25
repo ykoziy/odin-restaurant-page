@@ -9,7 +9,9 @@ const createElement = (type, id, classList, attributes, txt) => {
     }
 
     if (attributes) {
-        //TODO
+        attributes.forEach(attribute => {
+            element.setAttribute(attribute[0], attribute[1]);
+        });
     }
 
     if (txt) {
