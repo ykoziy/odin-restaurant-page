@@ -22,4 +22,4 @@ const createHeroDiv = () => {
     return heroDiv;
 }
 
-export { generate };
+export default generate;

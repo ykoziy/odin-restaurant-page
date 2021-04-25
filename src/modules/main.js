@@ -1,6 +1,8 @@
 import { createElement } from './util/dom';
 
-import { generate as homeTab } from './homeTab';
+import homeTab from './homeTab';
+import menuTab from './menuTab';
+import contactTab from './contactTab';
 
 const generate = (container) => {
     const mainElement = createElement("main");
@@ -19,10 +21,10 @@ const togglePage = (page) => {
         homeTab(contentElement);
     } else if (page == "menu") {
         clearPage();
-        console.log('Load menu page.');        
+        menuTab(contentElement);     
     } else if (page == "contact") {
         clearPage();
-        console.log('Load contact page.');        
+        contactTab(contentElement);    
     }
 };
 
