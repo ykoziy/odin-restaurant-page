@@ -2,7 +2,9 @@ nav{height:100px;border-bottom:2px solid #ff6347;background-color:rgba(0,0,0,0.3
 
 #hero{display:flex;flex-direction:column;align-items:center}#hero h1{font-family:"Carter One",cursive;font-size:2.5rem}#hero p{margin:15px 0}.menu-btn{color:black;background-color:red;border:none;width:160px;height:50px;border-radius:50px;text-transform:uppercase;font-family:"Kanit",sans-serif;font-weight:bold;font-size:1.3rem}
 
-main{display:flex;height:100%;align-items:center;justify-content:center}#content-main{width:550px;height:100%;padding:30px;display:flex;align-items:center;justify-content:center;background-color:rgba(0,0,0,0.36)}#content-main>*{animation:showTab 500ms ease-in-out}
+#menu{background-color:limegreen;width:100%;height:500px;padding:1rem;display:grid;grid-template-columns:1fr 1fr;grid-gap:1rem;scroll-snap-type:y mandatory;scroll-padding-top:1rem;overflow-y:scroll}#menu:after{content:"";display:block;height:1rem;width:100%;grid-column-start:span 2}.menu-item{scroll-snap-align:start;height:470px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;background-color:orange}.menu-item-title{background-color:gray}.menu-item-img{background-color:greenyellow;width:300px;height:280px}.menu-item-text{background-color:lightblue}
+
+main{display:flex;height:100%;align-items:center;justify-content:center}#content-main{width:750px;height:100%;padding:30px;display:flex;align-items:center;justify-content:center;background-color:rgba(0,0,0,0.36)}#content-main>*{animation:showTab 500ms ease-in-out}
 
 footer{height:100px;display:flex;align-items:center;justify-content:space-between;border-top:2px solid #ff6347;background-color:rgba(0,0,0,0.36)}#credit{margin:0 50px}#social{margin:0 50px}#social ul{display:flex}#social li{margin:0 10px}#social a{color:white}#social a:active{color:white}
 
