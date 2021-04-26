@@ -2,6 +2,14 @@ import { createElement } from './util/dom';
 
 import '../styles/menu.scss';
 
+const menuItems = [
+    ["Pizza Marinara", './img/pizza-photo.jpg', "Topped with tomato, garlic, oregano, and extra-virgin olive oil."],
+    ["Pizza Margherita", './img/pizza-photo.jpg', "Topped with tomato, fresh sliced mozzarella, fresh basil, and extra-virgin olive oil."],
+    ["Pizza Margherita Extra", './img/pizza-photo.jpg', "Topped with tomato, sliced mozzarella di Bufala, fresh basil, and extra-virgin olive oil."],
+    ["Pizza Napoli", './img/pizza-photo.jpg', "Topped with tomato, anchovies, mozzarella, capers and extra-virgin olive oil."],
+    ["Pizza Diavola", './img/pizza-photo.jpg', "Topped with tomato, mozzarella, fresh basil, peperoni and extra-virgin olive oil."],    
+];
+
 const generate = (container) => {
     container.appendChild(createMenuDiv());
 }
@@ -9,22 +17,23 @@ const generate = (container) => {
 const createMenuDiv = () => {
     const menuDiv = createElement("div", "menu");
 
-    for (let i = 0; i <= 8; i++) {
-        menuDiv.appendChild(createMenuItem(i+1));
-    }
+    menuItems.forEach(item => {
+        menuDiv.appendChild(createMenuItem(item[0], item[1], item[2]));
+    });
 
     return menuDiv;
 }
 
-const createMenuItem = (title) => {
+const createMenuItem = (title, picture, description) => {
     const menuItem = createElement("div", null, "menu-item");
+    const titleElement = createElement("h1", null, "menu-item-title", null, `${title}`);
 
-    const titleElement = createElement("h1", null, "menu-item-title", null, `Menu Item ${title}`);
     const imgElement = createElement("div", null, "menu-item-img");
-    const txtContainerElement = createElement("div", null, "menu-text-container");
+    const photo = createElement("img", null, null, [['src', picture], ['alt', 'Pizza photo']]);
+    imgElement.appendChild(photo);
 
-    const txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-    const pElement = createElement("p", null, "menu-item-text", null, txt+txt);
+    const txtContainerElement = createElement("div", null, "menu-text-container");
+    const pElement = createElement("p", null, "menu-item-text", null, description);
 
     txtContainerElement.appendChild(pElement);
 
