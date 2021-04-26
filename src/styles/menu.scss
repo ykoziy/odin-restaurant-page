@@ -31,14 +31,21 @@
 
 .menu-item-title {
     background-color: gray;
+    padding: 0.5rem;
 }
 
 .menu-item-img {
     background-color: greenyellow;
     width: 300px;
     height: 280px;
+    margin: 0.2rem;
+}
+
+.menu-text-container {
+    background-color: lightblue;
+    padding: 0.5rem;
 }
 
 .menu-item-text {
-    background-color: lightblue;
+    text-align: center;
 }

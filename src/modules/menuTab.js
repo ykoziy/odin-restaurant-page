@@ -21,14 +21,16 @@ const createMenuItem = (title) => {
 
     const titleElement = createElement("h1", null, "menu-item-title", null, `Menu Item ${title}`);
     const imgElement = createElement("div", null, "menu-item-img");
-
+    const txtContainerElement = createElement("div", null, "menu-text-container");
 
     const txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-    const textElement = createElement("p", null, "menu-item-text", null, txt+txt);
+    const pElement = createElement("p", null, "menu-item-text", null, txt+txt);
+
+    txtContainerElement.appendChild(pElement);
 
     menuItem.appendChild(titleElement);
     menuItem.appendChild(imgElement);
-    menuItem.appendChild(textElement);
+    menuItem.appendChild(txtContainerElement);
 
     return menuItem;
 }
