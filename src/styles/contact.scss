@@ -1,0 +1,41 @@
+#contact {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+   // background-color: limegreen;
+}
+
+#contact i {
+    margin-right: 1rem;
+}
+
+#contact p {
+    text-align: right;
+}
+
+#directions {
+    padding: 1rem;
+    background-color: white;
+}
+
+#hours {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: .2fr 1fr;
+    grid-template-rows: .2fr 1fr;
+}
+
+#hours > div {
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#phone {
+
+}
