@@ -31,3 +31,15 @@ nav li:hover {
     cursor: pointer;
     padding-bottom: 5px;
 }
+
+@media screen and (max-width: 560px) {
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 110px;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+}

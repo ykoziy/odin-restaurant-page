@@ -30,3 +30,11 @@ footer {
 #social a:active {
     color: white;
 }
+
+@media screen and (max-width: 560px) {
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 110px;
+    }
+}
