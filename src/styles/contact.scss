@@ -6,7 +6,6 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-   // background-color: limegreen;
 }
 
 #contact i {
@@ -36,6 +35,9 @@
     align-items: center;
 }
 
-#phone {
-
+@media screen and (max-width: 560px) {
+    #directions iframe {
+        width: 400px;
+        height: 300px; 
+    }
 }
