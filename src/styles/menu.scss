@@ -53,3 +53,17 @@
 .menu-item-text {
     text-align: center;
 }
+
+@media screen and (max-width: 560px) {
+    #menu {
+        grid-template-columns: 1fr;
+    }
+
+    #menu:after {
+        content: "";
+        display: block;
+        height: 1rem;
+        width: 100%;
+        grid-column-start: span 1;
+    }    
+}
