@@ -36,10 +36,18 @@ nav li:hover {
     nav {
         flex-direction: column;
         justify-content: space-around;
-        height: 110px;
+        height: fit-content;
     }
 
     nav li {
-        margin: 0 15px;
+        margin: 6px 15px;
     }
+
+    nav ul {
+        flex-direction: column;        
+    }
+
+    #logo {
+        margin-top: 10px;
+    }    
 }
